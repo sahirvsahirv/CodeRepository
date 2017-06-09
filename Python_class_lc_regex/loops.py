@@ -63,7 +63,9 @@ def solve(numheads,numlegs):
 numheads=35
 numlegs=94
 solutions=solve(numheads,numlegs)
-print( solutions)
-
-
-
+print("chickens = {} and rabbits = {}".format(solutions[0], solutions[1]))
+#beautiful solution
+mylist = [[c,r] for c in range(35) for r in range(35) if((c+r==35) and (2*c+4*r==94))]
+print(mylist)
+#http://mathforum.org/library/drmath/view/62209.html
+#To solve them using numpy

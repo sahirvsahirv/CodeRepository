@@ -46,7 +46,7 @@ string = "my address is gowri.r@gmail.com"
 #escaping . - literal one
 #one ore more of - c or o or m
 
-email2 = re.search(r'.+@.+\.[com]+', string)
+email2 = re.search(r'.+@.+\.[com]', string)
 #one or more words not having '@'
 #then one '@'
 #one or more words not having '@'
@@ -54,10 +54,32 @@ email2 = re.search(r'.+@.+\.[com]+', string)
 #one or more words not having '@'
 email21 = re.search(r'[^@]+@[^@]+\.[^@]+',string)
 
-print(email2)
-print(email21)
+#print(email2)
+#print(email21)
 
 #break the code - change it to ".ccom" and try ".gth"
+
+#try with word boundaries now - [com] matches only a list
+emailwb = re.search(r'\w+\.\w+@\w+\.\w+[com]', string)
+print(emailwb)
+#try changing it by removing the [com]
+emailwb2 = re.search(r'\w+\.\w+@\w+\.\w+', string)
+print(emailwb2)
+#saving the pattern - pattern is simpler
+emailwb3 = re.search(r'[\w.]+@\w+\.\w+[com]', string)
+print(emailwb3)
+emailwb4 = re.search(r'[\w.]+@[\w.]+[com]', string)
+print(emailwb4)
+
+#more with comrgnetdu
+emailwb5 = re.search(r'[\w.]+@[\w.]+[com|org|net|edu]', string)
+print(emailwb5)
+
+#demilitor for the .
+emailwb5 = re.search(r'/.+@.+\..+/i', string)
+print(emailwb5)
+
+
 #it can get very complex and the RFC compliant code is
 
 ##
