@@ -1,0 +1,40 @@
+
+##RULES
+##a, X, 9, < : plain characters match themselves
+##^$*+?{[]|() : meta-characters that have special meanings
+##() : Define the scope and precedence of the operators
+##: Boolean “or”, meaning either one or other of one	other
+##^ : Start of a string
+##$ : End of a string
+##\ : inhibit the uniqueness of a character that is otherwise considered a meta-character (i.e., \ . for period; \ \ for slash; $ for a dollar sign)
+##? : match zero or one occurrence of the pattern to the left (i.e., may or may not appear in pattern)
+##- : if between two [], indicates a range of digits or alphabetic chars; will be interpreted as a literal if appearing first or last inside [].
+##* : zero or more occurrences of a pattern to the left of
+##+ : one or more occurrences of a pattern to the left of (q+, say, if you are expecting multiple q’s)
+##. : periods match any character (except newline \n)
+##{n} : matches number of times the preceding character/s appear (for example, a tel. # might be [0-9]{3}-[0-9]{3}-[0-9]{4})
+##\w : matches a “word” character (such as a letter, number, or underbar)
+##\W : matches any non-word character
+##\d : decimal digit (ie, 0-9)
+##\b : boundary between word and non-word and \B non-word boundary
+##\s : matches any single whitespace character (such as space, newline, return, tab, form)
+##\t : tab
+##\n : newline
+##\r : return
+##\f : form
+##\S : marches any non-whitespace character
+
+#with a group []
+## inside a group - searched for one character amongst the group
+## . , - are literal
+## \ backslash for escaping is not allowed
+## [^xyz] -all but xyz for exclusion
+
+
+#Exercises
+
+#Write a Python program that matches a string that has an 'a' followed by anything, ending in 'b'.
+#Write a Python program that matches a word at the beginning of a string.
+#Write a Python program that matches a word containing 'z'.
+#Write a Python program that matches a word containing 'z', not start or end of the word.
+#Write a Python program that matches a word at end of string, with optional punctuation.
