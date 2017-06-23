@@ -38,3 +38,5 @@
 #Write a Python program that matches a word containing 'z'.
 #Write a Python program that matches a word containing 'z', not start or end of the word.
 #Write a Python program that matches a word at end of string, with optional punctuation.
+
+#http://pankajparashar.com/posts/python-regular-expressions/
