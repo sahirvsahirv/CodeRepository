@@ -1,0 +1,16 @@
+[['4/5/2015 13:34', 'Apples', '73'], ['4/5/2015 3:41', 'Cherries', '85'], ['4/6/2015 12:46', 'Pears', '14'], ['4/8/2015 8:59', 'Oranges', '52'], ['4/10/2015 2:07', 'Apples', '152'], ['4/10/2015 18:10', 'Bananas', '23'], ['4/10/2015 2:40', 'Strawberries', '98']]
+Removing header from csv.csv...
+Removing header from output.csv...
+json
+python data
+{'miceCaught': 0, 'name': 'Zophie', 'felineIQ': None, 'isCat': True}
+json data
+{"miceCaught": 0, "name": "Zophie", "felineIQ": null, "isCat": true}
+Current weather in %s:
+Clear - clear sky
+
+Tomorrow:
+Clear - clear sky
+
+Day after tomorrow:
+Snow - light snow
