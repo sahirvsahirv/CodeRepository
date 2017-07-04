@@ -1,0 +1,83 @@
+<!-- 1. Change it to functions
+pick a word
+Set up the answer array
+show progress
+update game state in answer array
+test if game is over
+error checks using switch case
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Shows up on the tab-->
+	<title>Hangman Game</title>
+</head>
+<body>
+	<h1>Hangman Game</h1>
+	
+	<script>
+		words = ["fish", "game", "rote", "goat", "duck"];
+		//getting a number from 0-4
+		var guessword = words[Math.floor((Math.random()*5))];
+		var answerarray = ["_","_","_","_"];
+		//space is the separator
+		var gameover = false;
+		while(gameover == false)
+		{	
+			//intimate the current status to the user
+			//show the status to the user
+			alert(answerarray.join(" "));
+			
+			//Reveal the guessword while debugging
+			console.log(guessword);
+			alert(guessword);
+			var guess = prompt("enter the guess letter");
+			if(guess == null)
+			{
+				//let the user quit
+				continue;
+			}
+			if(guess.length > 1)
+			{
+				alert("Guess can be just one letter. Try again");
+				//not required - handled naturally
+				//break;
+			}
+			else	
+			{
+				//replacing the guess
+				var replaceindex = guessword.indexOf(guess);
+				if(replaceindex == -1)
+				{
+					alert("Incorrect guess");
+					//not required - handled naturally
+					//continue;
+				}
+				else
+				{
+					//Correct guess
+					//replace
+					answerarray[replaceindex] =  guess;
+					//check if any more guesses left
+					var isOver = answerarray.indexOf("_");
+					if(isOver == -1)
+					{
+						//game is over
+						alert("Congratulations on finding  the word");
+						break;
+					}
+				}
+			  }//valid guess
+			
+			var gameover = confirm("Do you want to quit?");
+			if(gameover == true)
+			{	
+				//break to exit the loop
+				break;
+			}
+			
+		 }//while
+		
+	</script>
+</body>
+</html>
